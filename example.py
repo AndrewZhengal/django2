@@ -29,7 +29,6 @@ class Product:
         print(f'Add {count} product[{self.product}] to cart')
         print(f'Add {count} product[{self.product}] to cart')
 
-
     def edit_description(self):
         print(f'Edit Description')
 

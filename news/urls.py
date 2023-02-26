@@ -23,8 +23,8 @@ from polls.views import index, detail, blog_handler
 
 urlpatterns = [
     path('', index),
+    path('admin/', admin.site.urls),
     path('polls/<int:question_id>/', detail),
     path('blog/', blog_handler),
-    path('admin/', admin.site.urls),
 
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
