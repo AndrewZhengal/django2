@@ -27,6 +27,11 @@ def blog_handler(request):
     return render(request, 'newstest/blog.html', context)
 
 
+def single_blog_handler(request):
+    context = {}
+    return render(request, 'newstest/single-blog.html', context)
+
+
 def robots_handler(request):
     context = {}
     return render(request, 'newstest/robots.txt', context, content_type='text/plain')

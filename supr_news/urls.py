@@ -28,6 +28,7 @@ urlpatterns = [
     path('polls/<int:question_id>/', detail),
 
     path('blog/', views.blog_handler),
+    path('single-blog/', views.single_blog_handler),
     path('archive/', views.archive_handler),
     path('category/', views.category_handler),
     path('contact/', views.contact_handler),
