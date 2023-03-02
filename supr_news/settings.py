@@ -31,7 +31,7 @@ INTERNAL_IPS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
     'news.apps.NewsConfig',
+    'django.contrib.admin',
     'debug_toolbar',
+    'django_summernote',
 
 
 ]
@@ -126,6 +128,10 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static"]
+
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = "media"
 
 
 # Default primary key field type

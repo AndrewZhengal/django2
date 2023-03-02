@@ -24,7 +24,6 @@ from news import views
 
 urlpatterns = [
     path('', index),
-    path('admin/', admin.site.urls),
     path('polls/<int:question_id>/', detail),
 
     path('blog/', views.blog_handler),
@@ -34,7 +33,12 @@ urlpatterns = [
     path('contact/', views.contact_handler),
     path('index/', views.index_handler),
     path('robots.txt', views.robots_handler),
+
+    path('summernote/', include('django_summernote.urls')),
+    path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
 
-
-    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    ]
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
